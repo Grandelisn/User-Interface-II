@@ -1,10 +1,13 @@
 /* Add CSS styling here */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');/*Roboto Font*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&family=Roboto&display=swap');/*Raleway Font*/
 *{
     font-size: 62.5%;
     border:1px solid black; 
     box-sizing: border-box;
     margin:0;
     padding:0;
+    font-family:'Raleway', sans-serif;
 
 }
 body{
@@ -14,7 +17,7 @@ body{
     height:100vh;
     margin:10px;
     font-size:100px;
-    background-color: gray;
+    background-color: #01adac;
 
     
 }
@@ -24,19 +27,18 @@ section{
     width:100%;   
 }
 header{
-    background-color: blue;
     flex-flow:column nowrap;
 }
 .headerTest{
     display:flex;
     width:100%;
     text-decoration:none;
-    color:red;
+    color:#f8a41b;
     padding-left:1%;
     
 }
 h3{
-    height:5vh;
+    color:#f8a41b;
 }
 .navButtons{
     display: flex;
@@ -48,8 +50,9 @@ h3{
     display:inline-block;
     text-decoration:none;
     text-align: center;
-    background-color:green;
-    color:red;
+    background-color:#a2208e;
+    color:#f8a41b;
+    border-radius: 50%;
     padding:1em;
 
 }
