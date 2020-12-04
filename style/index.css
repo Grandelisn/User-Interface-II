@@ -19,6 +19,8 @@ body{
     
 }
 section{
+    display: flex;
+    flex-direction: row;
     width:100%;   
 }
 header{
@@ -30,7 +32,7 @@ header{
     width:100%;
     text-decoration:none;
     color:red;
-    
+    padding-left:1%;
     
 }
 h3{
@@ -40,6 +42,7 @@ h3{
     display: flex;
     flex-flow:row nowrap;
     font-size:.5em;
+    
 }
 .navButtons a{
     display:inline-block;
@@ -62,8 +65,8 @@ h3{
 .gallery{
     display:flex;
     flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     width:100%;
     
@@ -75,18 +78,27 @@ h3{
 
 
 }
+.gallery img{
+    width: 100%;
+}
 .project{
     display:flex;
     flex-flow:column wrap;
     justify-content: center;
     align-items: flex-start;
-    background:green;
+    background:red;
     width: 100%;
     
     
 }
 .project img{
     width:25%;
+}
+.project div{
+    flex-flow:row wrap;
+    width:25%;
+    margin:15px;
+
 }
 .bigProject{
     display:flex;
