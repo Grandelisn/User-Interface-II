@@ -1,64 +1,102 @@
 /* Add CSS styling here */
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');/*Roboto Font*/
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;1,400&family=Roboto&display=swap');/*Raleway Font*/
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+/* border: 0;   */
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
+}
 *{
+    box-sizing:border-box; /*this rule says, if I give an element a width I want it to respect that width - if I add padding or a border, apply it within the width given not in addition to it*/
+    /*border:1px solid grey;*/
+    max-width:100%; /*this says you can never be bigger than your parent*/
+}
+html{
     font-size: 62.5%;
-    border:1px solid black; 
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
     font-family:'Raleway', sans-serif;
 
 }
 body{
     display:flex;
     flex-flow:column nowrap;
-    width:100%;
-    margin:10px;
-    font-size:100px;
-    background-color: #01adac;
-
+    margin:1%;
+    background-color: #16697a;
+    text-shadow: 1px 1px #db6400;
     
+}
+img{
+    border-radius: 10px;
+}
+h1{
+    font-size:10em;
+}
+h2{
+    font-size: 5em;
+    color:#f8f1f1;
+}
+h3{
+    color:#f8f1f1;
 }
 section{
     display: flex;
-    flex-direction: row;
-    width:100%;   
+    flex-direction: row;  
+}
+.topSect .project{
+    width:100%;
+}
+.topSect .project p{
+    color:#f8f1f1;
+    
+    font-size:2em;
+}
+.topSect img{
+    margin-left:4%;
 }
 header{
     flex-flow:column nowrap;
 }
 .headerTest{
     display:flex;
-    width:100%;
     text-decoration:none;
-    color:#f8a41b;
-    padding-left:1%;
-    
-}
-h3{
-    color:#f8a41b;
+    color:#f8f1f1;
+    width:55%;
+    padding-left:1%;   
 }
 .navButtons{
     display: flex;
     flex-flow:row nowrap;
-    font-size:.5em;
+    font-size:2em;
+    justify-content: space-evenly;
     
 }
 .navButtons a{
-    display:inline-block;
     text-decoration:none;
     text-align: center;
-    background-color:#a2208e;
-    color:#f8a41b;
+    background-color:#ffa62b;
+    color:#f8f1f1;
     border-radius: 10%;
+    margin:3%;
     padding:.5em;
 
 }
 .boxInfo{
         display:flex;
         flex-flow:column nowrap;
-        width:100%;
         justify-content:space-around;
         align-items:flex-start;
         
@@ -68,16 +106,11 @@ h3{
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    width:100%;
-    
+    text-align: center; 
 }
-.gallery div{
-    
+.gallery div{  
     width:20%;
-    margin:2%
-
-
+    margin:2%;
 }
 .gallery img{
     width: 100%;
@@ -86,27 +119,20 @@ h3{
     display:flex;
     flex-flow:column wrap;
     justify-content: center;
-    align-items: flex-start;
-    background:red;
-    width: 100%;
-    
-    
+    align-items: center;
 }
 .project img{
     width:25%;
 }
 .project div{
-    flex-flow:row wrap;
-    width:25%;
-    margin:15px;
+    width:35%;
 
 }
 footer{
     display:flex;
     flex-flow:column wrap;
-    font-size:.3em;
     width:100%;
-    background:blue;
+    
     justify-content: center;
     align-items: center;   
 }
@@ -114,8 +140,9 @@ footer{
     text-decoration: none;
     padding:.5em;
     border-radius: 10%;
-    background-color: purple;
-    color:white;
+    background-color: #ffa62b;
+    color:#f8f1f1;
+    font-size:4em;
 }
 .footerTest .navButtons{
     display:flex;
@@ -123,5 +150,60 @@ footer{
 }
 .footerTest .navButtons a{
     display:flex;
-    flex-flow:row wrap;   
+    flex-flow:row wrap;  
+    padding:.25em;
+    background-color: #16697a; 
+}
+@media(max-width:800px){
+    .headerTest{
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .headerTest .navButtons {
+        flex-flow:column nowrap;
+    }
+    .topSect{
+        flex-flow:column nowrap;
+    }
+    .project{
+        text-align: center;
+    }
+    .project .navButtons{
+        justify-content: center;
+        
+    }
+    .gallery {
+        flex-flow:row wrap;
+    }
+    .gallery div{
+        width:40%;
+    }
+    
+}
+@media(max-width:500px){
+    .headerTest{
+        flex-flow:column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .headerTest .navButtons {
+        flex-flow:column nowrap;
+    }
+    .topSect{
+        flex-flow:column nowrap;
+    }
+    .project{
+        text-align: center;
+    }
+    .project .navButtons{
+        justify-content: center;
+        
+    }
+    .gallery {
+        flex-flow:row wrap;
+    }
+    .gallery div{
+        width:40%;
+    }
 }
